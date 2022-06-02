@@ -39,7 +39,7 @@
          <action name="addtodatabase" class="project.example.AddtoDatabase" method="execute">
           <interceptor-ref name="defaultStack"/>
               <result name="success">/WEB-INF/Pages/LoginA.jsp</result>
-               <result name="input">/WEB-INF/Pages/Register.jsp</result>
+              <result name="input">/WEB-INF/Pages/Register.jsp</result>
             <result name="error">/WEB-INF/Pages/error.jsp</result>
   </action>
         <action name="LoginA" class="project.example.LoginA">

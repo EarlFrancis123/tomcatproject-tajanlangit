@@ -4,7 +4,7 @@
 <validators>
    <field name="personBean.firstName">
         <field-validator type="requiredstring">
-            <message>Username is required.</message>
+            <message>First Name is required.</message>
         </field-validator>
          </field>
         
@@ -20,17 +20,17 @@
     </field> -->
     <field name="personBean.lastName">
         <field-validator type="requiredstring">
-            <message>Password is required.</message>
+            <message>Last Name is required.</message>
         </field-validator>
     </field>
 <field name="personBean.age">
         <field-validator type="requiredstring">
-            <message>Password is required.</message>
+            <message>Age is required.</message>
         </field-validator>
     </field>
     <field name="personBean.email">
         <field-validator type="requiredstring">
-            <message>Password is required.</message>
+            <message>Email is required.</message>
         </field-validator>
     </field>
     <field name="personBean.password">
