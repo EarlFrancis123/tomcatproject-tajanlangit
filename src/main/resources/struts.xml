@@ -5,7 +5,13 @@
 <struts>
     <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
     <constant name="struts.devMode" value="true"/>
-
+<constant name="struts.convention.action.suffix" value="Controller"/>
+    <constant name="struts.convention.action.mapAllMatches" value="true"/>
+    <constant name="struts.convention.default.parent.package" value="rest-default"/>
+    <constant name="struts.convention.package.locators" value="rest"/>
+    <constant name="struts.mapper.class" value="org.apache.struts2.dispatcher.mapper.PrefixBasedActionMapper" />
+    <constant name="struts.mapper.prefixMapping" value="/rest:rest,:struts"/>
+    <constant name="struts.rest.namespace" value="/rest" />
     <include file="example.xml"/>
 
     <package name="default" namespace="/" extends="struts-default">
@@ -55,6 +61,17 @@
         <action name="displayUser" class="project.example.List" method="displayUser">
             <result name="success">/WEB-INF/Pages/welcome.jsp</result>
         </action>
+         <package name="rest" namespace="/rest" extends="rest-default">
+        <action name="Accounts/*" class="project.example.rest.AccountsController">
+            <result name="id"> ${1} </result>
+        </action>
+    </package>
+      <package name="Default" namespace="/" extends="struts-default">
+        <default-action-ref name="index"/>
+        <action name="index" class="com.scheduler.sbclinic.pages.Index">
+            <result>/WEB-INF/index.jsp</result>
+        </action>
+    </package>
     </package>
 
     <!-- Add addition packages and configuration here. -->
